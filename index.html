@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuickSite</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+header h1 {
+    font-size: 52px;
+    margin: 0 0 15px;
+}
+
+header p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 16px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.service {
+    padding: 20px;
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+
+.price {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+}
+
+@media (max-width: 600px) {
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>QuickSite</h1>
+    <p>Des sites web simples et professionnels pour les petits commerces.</p>
+    <a class="button" href="#contact">Nous contacter</a>
+</header>
+
+<section>
+    <h2>Pourquoi QuickSite ?</h2>
+    <p>
+        Nous créons des sites modernes, simples et adaptés aux téléphones
+        pour aider les petits commerces à être visibles sur Internet.
+    </p>
+</section>
+
+<section>
+    <h2>Nos services</h2>
+
+    <div class="services">
+
+        <div class="service">
+            <h3>🌐 Site professionnel</h3>
+            <p>Une page claire pour présenter votre activité.</p>
+        </div>
+
+        <div class="service">
+            <h3>📱 Compatible téléphone</h3>
+            <p>Votre site fonctionne sur ordinateur et smartphone.</p>
+        </div>
+
+        <div class="service">
+            <h3>📍 Informations</h3>
+            <p>Horaires, adresse, téléphone et présentation.</p>
+        </div>
+
+        <div class="service">
+            <h3>⚡ Simple et rapide</h3>
+            <p>Un site facile à consulter pour vos clients.</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Notre offre</h2>
+
+    <p>Création d'un site vitrine simple :</p>
+
+    <p class="price">99 €</p>
+
+    <p>
+        Le prix peut être adapté selon les besoins du client.
+    </p>
+
+    <a class="button" href="#contact">Demander un site</a>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+
+    <p>
+        Vous souhaitez un site pour votre activité ?
+    </p>
+
+    <a class="button" href="mailto:quickesite.contact@gmail.com">
+        Nous contacter par e-mail
+    </a>
+</section>
+
+<footer>
+    © 2026 QuickSite
+</footer>
+
+</body>
+</html>
