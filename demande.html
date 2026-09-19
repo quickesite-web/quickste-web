@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Demander un site - QuickSite</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #172033;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin: 0 0 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        .formulaire {
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 35px;
+            background: white;
+            border-radius: 16px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        input,
+        textarea,
+        select {
+            padding: 13px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 15px;
+            background: #2563eb;
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .retour {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .info {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Demander un site</h1>
+    <p>Parlez-nous de votre projet</p>
+</header>
+
+<div class="formulaire">
+
+    <div class="info">
+        Remplissez ce formulaire avec le plus d'informations
+        possible afin que nous puissions comprendre votre projet.
+    </div>
+
+    <form action="mailto:quickesite.contact@gmail.com"
+          method="post"
+          enctype="text/plain">
+
+        <label for="nom">
+            Prénom et nom *
+        </label>
+
+        <input
+            type="text"
+            id="nom"
+            name="Nom"
+            placeholder="Exemple : Thomas Martin"
+            required
+        >
+
+
+        <label for="entreprise">
+            Nom de l'entreprise *
+        </label>
+
+        <input
+            type="text"
+            id="entreprise"
+            name="Entreprise"
+            placeholder="Exemple : Martin Coiffure"
+            required
+        >
+
+
+        <label for="email">
+            Adresse e-mail *
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            name="Email"
+            placeholder="exemple@email.com"
+            required
+        >
+
+
+        <label for="telephone">
+            Numéro de téléphone
+        </label>
+
+        <input
+            type="tel"
+            id="telephone"
+            name="Telephone"
+            placeholder="Votre numéro"
+        >
+
+
+        <label for="adresse">
+            Adresse de l'entreprise
+        </label>
+
+        <input
+            type="text"
+            id="adresse"
+            name="Adresse"
+            placeholder="Rue, ville..."
+        >
+
+
+        <label for="activite">
+            Type d'activité *
+        </label>
+
+        <input
+            type="text"
+            id="activite"
+            name="Activite"
+            placeholder="Exemple : Restaurant, coiffeur..."
+            required
+        >
+
+
+        <label for="site">
+            Avez-vous déjà un site internet ?
+        </label>
+
+        <input
+            type="url"
+            id="site"
+            name="Site_actuel"
+            placeholder="https://exemple.com"
+        >
+
+
+        <label for="couleur">
+            Quelles couleurs souhaitez-vous ?
+        </label>
+
+        <input
+            type="text"
+            id="couleur"
+            name="Couleurs"
+            placeholder="Exemple : bleu et blanc"
+        >
+
+
+        <label for="pages">
+            Quelles pages souhaitez-vous ?
+        </label>
+
+        <textarea
+            id="pages"
+            name="Pages"
+            placeholder="Exemple : Accueil, Services, À propos, Contact..."
+        ></textarea>
+
+
+        <label for="projet">
+            Décrivez votre projet *
+        </label>
+
+        <textarea
+            id="projet"
+            name="Projet"
+            placeholder="Expliquez-nous ce que vous souhaitez sur votre site..."
+            required
+        ></textarea>
+
+
+        <label for="exemples">
+            Avez-vous des exemples de sites que vous aimez ?
+        </label>
+
+        <textarea
+            id="exemples"
+            name="Exemples"
+            placeholder="Vous pouvez mettre des liens ou expliquer ce que vous aimez."
+        ></textarea>
+
+
+        <label for="informations">
+            Informations supplémentaires
+        </label>
+
+        <textarea
+            id="informations"
+            name="Informations_supplementaires"
+            placeholder="Autres informations importantes..."
+        ></textarea>
+
+
+        <button type="submit">
+            Envoyer ma demande
+        </button>
+
+    </form>
+
+    <a class="retour" href="index.html">
+        ← Retour au site
+    </a>
+
+</div>
+
+</body>
+</html>
