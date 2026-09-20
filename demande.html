@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,6 +8,10 @@
     <title>Demander un site - QuickSite</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -18,47 +23,67 @@
             background: #111827;
             color: white;
             text-align: center;
-            padding: 55px 20px;
+            padding: 65px 20px;
         }
 
         header h1 {
             font-size: 42px;
-            margin: 0 0 10px;
+            margin: 0 0 12px;
         }
 
         header p {
             font-size: 18px;
+            margin: 0;
+            color: #d1d5db;
         }
 
         .formulaire {
+            width: calc(100% - 30px);
             max-width: 750px;
             margin: 40px auto;
             padding: 35px;
             background: white;
             border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .info {
+            background: #eff6ff;
+            border-left: 4px solid #2563eb;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            line-height: 1.5;
         }
 
         form {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 10px;
         }
 
         label {
             font-weight: bold;
-            margin-top: 8px;
+            margin-top: 12px;
         }
 
         input,
-        textarea,
-        select {
-            padding: 13px;
+        textarea {
+            width: 100%;
+            padding: 14px;
             border: 1px solid #cbd5e1;
             border-radius: 8px;
             font-size: 16px;
             font-family: Arial, sans-serif;
-            box-sizing: border-box;
-            width: 100%;
+            background: white;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
         }
 
         textarea {
@@ -67,7 +92,7 @@
         }
 
         button {
-            margin-top: 15px;
+            margin-top: 20px;
             background: #2563eb;
             color: white;
             padding: 16px;
@@ -76,10 +101,16 @@
             font-size: 17px;
             font-weight: bold;
             cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
         }
 
         button:hover {
             background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        button:active {
+            transform: translateY(0);
         }
 
         .retour {
@@ -88,13 +119,36 @@
             margin-top: 25px;
             color: #2563eb;
             text-decoration: none;
+            font-weight: bold;
         }
 
-        .info {
-            background: #f1f5f9;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+        .retour:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 45px 20px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .formulaire {
+                margin: 20px auto;
+                padding: 22px;
+                border-radius: 12px;
+            }
+
+            input,
+            textarea {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -106,16 +160,19 @@
     <p>Parlez-nous de votre projet</p>
 </header>
 
-<div class="formulaire">
+<main class="formulaire">
 
     <div class="info">
         Remplissez ce formulaire avec le plus d'informations
-        possible afin que nous puissions comprendre votre projet.
+        possible afin que nous puissions comprendre votre projet
+        et vous proposer un site adapté à vos besoins.
     </div>
 
-    <form action="mailto:quickesite.contact@gmail.com"
-          method="post"
-          enctype="text/plain">
+    <form
+        action="mailto:quickesite.contact@gmail.com"
+        method="post"
+        enctype="text/plain"
+    >
 
         <label for="nom">
             Prénom et nom *
@@ -126,6 +183,7 @@
             id="nom"
             name="Nom"
             placeholder="Exemple : Thomas Martin"
+            autocomplete="name"
             required
         >
 
@@ -139,6 +197,7 @@
             id="entreprise"
             name="Entreprise"
             placeholder="Exemple : Martin Coiffure"
+            autocomplete="organization"
             required
         >
 
@@ -152,6 +211,7 @@
             id="email"
             name="Email"
             placeholder="exemple@email.com"
+            autocomplete="email"
             required
         >
 
@@ -165,6 +225,7 @@
             id="telephone"
             name="Telephone"
             placeholder="Votre numéro"
+            autocomplete="tel"
         >
 
 
@@ -177,6 +238,7 @@
             id="adresse"
             name="Adresse"
             placeholder="Rue, ville..."
+            autocomplete="street-address"
         >
 
 
@@ -272,7 +334,8 @@
         ← Retour au site
     </a>
 
-</div>
+</main>
 
 </body>
 </html>
+```
